@@ -88,7 +88,7 @@ extension UIImage {
         }
         
         // 开始给图片添加图片水印
-        UIGraphicsBeginImageContext(imageSize)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, UIScreen.main.scale)
         self.draw(in: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
         
         for frame in markedFrames {
